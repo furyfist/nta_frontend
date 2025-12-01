@@ -18,6 +18,7 @@ import AnalyticsPage from "./pages/admin/Analytics";
 import TestsPage from "./pages/admin/Tests";
 import NotificationsPage from "./pages/Notifications";
 import NotFound from "./pages/NotFound";
+import LandingPage from "./pages/LandingPage";
 
 const queryClient = new QueryClient();
 
@@ -29,7 +30,8 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<RoleSelection />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<RoleSelection />} />
             
             {/* Admin Routes */}
             <Route path="/admin" element={<AdminDashboard />} />
